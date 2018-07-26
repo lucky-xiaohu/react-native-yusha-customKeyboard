@@ -163,6 +163,10 @@ _handleAppStateChange = (nextAppState: string) => {
       this.props.onChangeText && this.props.onChangeText(text)
   }
 
+  focus = () => {
+      this.input && this.input.focus();
+  }
+
   render() {
     const { customKeyboardType, ...others } = this.props;
     return <TextInput {...others}
