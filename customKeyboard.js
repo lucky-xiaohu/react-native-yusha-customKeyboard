@@ -167,6 +167,10 @@ _handleAppStateChange = (nextAppState: string) => {
       this.input && this.input.focus();
   }
 
+  blur = () => {
+      this.input && this.input.blur();
+  }
+
   render() {
     const { customKeyboardType, ...others } = this.props;
     return <TextInput {...others}
